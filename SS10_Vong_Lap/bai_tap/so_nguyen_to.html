@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soLuong = +prompt("Nhập vào số lượng:");
+    let number = 2;
+    let soNguyenT = 0;
+    while (soNguyenT < soLuong) {
+        let count = 0;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            soNguyenT++;
+            document.write("Các số nguyên tố là:" + number);
+            document.write("<br>");
+        }
+        number++
+    }
+</script>
+</body>
+</html>

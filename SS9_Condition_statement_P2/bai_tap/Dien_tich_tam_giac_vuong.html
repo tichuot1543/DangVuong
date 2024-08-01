@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông</title>
+</head>
+<body>
+<h3>Tính diện tích hình tam giác vuông</h3>
+<input type="number" placeholder="Cạnh a" id="a">
+<input type="number" placeholder="Cạnh b" id="b">
+<button onclick="tinhToan()">Tính</button>
+<p id="Result"></p>
+<script>
+    function tinhToan() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = (1/2)*a*b;
+        document.getElementById("Result").innerHTML = "Diện tích hình tam giác vuông là:" + c;
+    }
+</script>
+</body>
+</html>

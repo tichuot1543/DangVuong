@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<h3>CALCULATOR</h3>
+<body>
+<input type="number" placeholder="Number 1" id="number1">
+<input type="number" placeholder="Number 2" id="number2">
+<br>
+<br>
+<button onclick="tinhToan ('Addition')">Addition (+)</button>
+<button onclick="tinhToan ('Subtraction')">Subtraction (-)</button>
+<button onclick="tinhToan ('Multiplication')">Multiplication (x)</button>
+<button onclick="tinhToan ('Division')">Division (/)</button>
+<p id="Result"></p>
+<script>
+    function tinhToan(toanTu) {
+        let value1 = +document.getElementById("number1").value;
+        let value2 = +document.getElementById("number2").value;
+        let result;
+        if (toanTu === 'Addition') {
+            result = value1 + value2;
+        } else if (toanTu === 'Subtraction') {
+            result = value1 - value2;
+        } else if (toanTu === 'Multiplication') {
+            result = value1 * value2;
+        } else if (toanTu === 'Division') {
+            result = value1 / value2;
+        }
+        document.getElementById("Result").innerHTML = "Result:" + result
+    }
+</script>
+
+</body>
+</html>

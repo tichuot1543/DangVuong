@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mức hoa hồng theo doanh số</title>
+</head>
+<body>
+<h3>Mức hoa hồng nhận được</h3>
+<input type="number" placeholder="Nhập doanh só của bạn (triệu VND)" id="sales">
+<button onclick="chuyenDoi ()">Nhập</button>
+<p id="Submit"></p>
+<script>
+  function chuyenDoi () {
+    let sales = +document.getElementById("sales").value;
+    let salary;
+    if (sales >= 1 && sales <= 5) {
+        salary = sales * (10/100);
+    } else  if (sales >= 6 && sales <= 10) {
+        salary = sales * (15/100);
+    } else  if (sales >= 11 && sales <= 20) {
+        salary = sales * (17/100);
+    } else  if (sales >= 21 && sales <= 50) {
+        salary = sales * (20/100);
+    } else  if (sales > 51) {
+        salary = sales * (30/100);
+    } else {
+        alert("Theo hợp đồng, bạn chưa đủ điều kiện nhận % hoa hồng của doanh số")
+    }
+    document.getElementById("Submit").innerHTML = "Lương tháng này của bạn là (triệu VND):" + salary;
+  }
+</script>
+</body>
+</html>

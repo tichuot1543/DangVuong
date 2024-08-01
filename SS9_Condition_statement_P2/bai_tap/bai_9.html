@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 số thưc</title>
+</head>
+<body>
+<h3>Kiểm tra 3 số thực</h3>
+<input type="number" placeholder="Cạnh a" id="a">
+<input type="number" placeholder="Cạnh b" id="b">
+<input type="number" placeholder="Cạnh c" id="c">
+<button onclick="check()">Kiểm tra</button>
+<p id="Notifications"></p>
+<script>
+    function check() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b) {
+            document.getElementById("Notifications").innerHTML = "3 số thực a, b, c là cạnh của hình tam giác"
+        } else {
+            document.getElementById("Notifications").innerHTML = "3 số thực a, b, c không phải cạnh của hình tam giác"
+            alert("Vui lòng nhập lại số khác")
+        }
+    }
+
+</script>
+</body>
+</html>

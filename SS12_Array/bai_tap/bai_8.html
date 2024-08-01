@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [4,3,1,55,6,5,7,8,2,23];
+    document.write("Mảng được khởi tạo là: " + arr + "<br>");
+    let min = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        min = arr[i];
+        for (let j = i; j < arr.length; j++) {
+            if (arr[j] < min) {
+                min = arr[j];
+                arr.splice(j, 1);
+                arr.splice(i, 0, min);
+            }
+        }
+    }
+    document.write("Mảng sau khi sắp xếp là: " + arr);
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="isPrime()">Check</button>
+<p id="Result"></p>
+<script>
+    function isPrime() {
+        let prime = document.getElementById("number").value
+        let count = 0;
+        for (let i = 1; i <= prime; i++) {
+            if (prime % i === 0) {
+                count += 1;
+            }
+            if (count === 2) {
+                document.getElementById("Result").innerHTML = prime + " là số nguyên tố";
+            } else {
+                document.getElementById("Result").innerHTML = prime + " không phải là số nguyên tố";
+            }
+        }
+    }
+    count = 0;
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="display()">Display</button>
+<p id="Result"></p>
+</body>
+<script>
+    function tangDonVi(a){
+        return  a + 1;
+    }
+    function display() {
+        let a = +document.getElementById("number").value;
+        let result = tangDonVi(a);
+        document.getElementById("Result").innerHTML = "Số sau khi tăng đơn vị là: " + result;
+    }
+
+
+</script>
+</html>
