@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<h3>Tính lãi ngân hàng</h3>
+<form id="interestForm">
+    <label for="principal">Số tiền ban đầu (VND): </label>
+    <input type="number" id="principal" required min="0" step="any"><br><br>
+
+    <label for="months">Số tháng cho vay: </label>
+    <input type="number" id="months" required min="1"><br><br>
+
+    <label for="interestRate">Lãi suất hàng tháng (%): </label>
+    <input type="number" id="interestRate" required min="0" step="any"><br><br>
+
+    <button type="submit">Tính toán</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+    document.getElementById('interestForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn không cho form submit mặc định
+
+        // Lấy giá trị từ các ô input
+        let principal = parseFloat(document.getElementById('principal').value);
+        let months = parseInt(document.getElementById('months').value);
+        let interestRate = parseFloat(document.getElementById('interestRate').value);
+
+        // Tính toán lãi ngân hàng
+        let monthlyInterestRate = interestRate / 100;
+        let totalAmount = principal * Math.pow(1 + monthlyInterestRate, months);
+
+        // Hiển thị kết quả
+        document.getElementById('result').innerHTML = `
+                Số tiền ban đầu: ${principal} VND<br>
+                Số tháng cho vay: ${months} tháng<br>
+                Lãi suất hàng tháng: ${interestRate}%<br><br>
+                Số tiền nhận được sau ${months} tháng là: ${totalAmount.toFixed(2)} VND
+            `;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mobile(id, name) {
+        this.is = id;
+        this.name = name;
+        this.messsage = '';
+        this.setMessage = function (message) {
+            this.messsage = message;
+        }
+        this.getMessage = function () {
+            return this.messsage;
+        }
+        this.sendMessage = function (send, mobile) {
+            mobile.setMessage(message);
+        }
+    }
+    let ios = new Mobile(1,'Iphone');
+    let android = new Mobile(2,'Samsung');
+    ios.sendMessage('Message from Iphone 15 pro max ', android);
+    let message = android.getMessage();
+    console.log(message)
+</script>
+</body>
+</html>

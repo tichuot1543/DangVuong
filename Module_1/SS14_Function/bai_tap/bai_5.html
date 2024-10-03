@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text" placeholder="Nhập tên của ngôi sao bạn muốn">
+<button onclick="check()">check</button>
+<p id="result"></p>
+<script>
+    let arrFirst = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let arrSecond = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+    function findStar(starName) {
+        for (let i = 0; i < arrFirst.length; i++) {
+            if (arrFirst[i].toLowerCase() === starName.toLowerCase()) {
+                return 'Ngôi sao '  + arrFirst[i] + ' thuộc chòm sao ' + arrSecond[i];
+            }
+        }
+
+    }
+    function check(){
+        let nameStar = document.getElementById('text').value;
+        let result = findStar(nameStar)
+        document.getElementById("result").innerHTML=result;
+    }
+
+</script>
+</body>
+</html>

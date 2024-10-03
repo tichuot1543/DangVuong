@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập nhiệt độ theo độ C" id="celsius">
+<button onclick="change()">Change celsius to fahrenheit</button>
+<button onclick="trade()">Change celsius to kelvins</button>
+<p id="result"></p> <br>
+<p id="result1"></p>
+<script>
+class Temperature {
+    constructor(doC) {
+        this.doC = doC;
+    }
+    setDoC (){
+        this.doC = +document.getElementById("celsius").value;
+    }
+    fahrenheit(){
+        let doF = 9/5 * this.doC + 32;
+        return "Nhiệt độ theo độ F là: " + doF;
+    }
+    kelvins(){
+        let doK = this.doC + 273.15
+        return "Nhiệt độ theo độ K là: " + doK;
+    }
+}
+
+// let temp = new Temperature(input);
+
+//document.write("Nhiệt độ theo độ C là: " + temp.doC);
+function change(){
+    let temp = new Temperature(+document.getElementById("celsius").value)
+    document.getElementById("result").innerHTML = temp.fahrenheit();
+}
+function trade(){
+    let temp = new Temperature(+document.getElementById("celsius").value)
+    document.getElementById("result1").innerHTML = temp.kelvins();
+}
+
+
+
+
+
+</script>
+</body>
+</html>

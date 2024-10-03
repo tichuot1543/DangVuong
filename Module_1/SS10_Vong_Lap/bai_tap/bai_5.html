@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n1 = 1;
+    let n2 = 1;
+    let n3;
+    let n4 = n1 + n2;
+    let i = 2;
+    do {
+        n1 = n2;
+        n3 = n1 + n2;
+        n4 += n3;
+        n2 = n3;
+        i++;
+    } while (i < 20)
+    document.write("Tổng 20 số đầu tiên trong dãy Fibonaccy là:" + n4)
+</script>
+</body>
+</html>

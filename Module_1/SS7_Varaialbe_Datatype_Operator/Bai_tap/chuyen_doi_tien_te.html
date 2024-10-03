@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amout</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>From currency</td>
+        <td></td>
+        <td></td>
+        <td>To cerrency</td>
+    </tr>
+    <tr>
+        <td><input type="number" placeholder="Số tiền" id="money"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><select>
+            <option>VietNam</option>
+        </select></td>
+        <td></td>
+        <td></td>
+        <td><select>
+            <option>USD</option>
+        </select></td>
+        <td>
+            <button onclick="chuyendoi()"><b>Convert</b></button>
+        </td>
+
+</table>
+<p id="Result"></p>
+<script>
+    function chuyendoi() {
+        let VietNam = +document.getElementById("money").value;
+        let USD = VietNam / 23585
+        document.getElementById("Result").innerHTML = "Result: " + USD.toLocaleString("vi-VietNam")
+    }
+</script>
+
+</body>
+</html>

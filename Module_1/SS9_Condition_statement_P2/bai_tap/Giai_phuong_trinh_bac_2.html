@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h3>GIẢI PHƯƠNG TRÌNH BẬC 2</h3>
+<input type="number" placeholder="Số a" id="a">
+<input type="number" placeholder="Số b" id="b">
+<input type="number" placeholder="Số c" id="c">
+<button onclick="tinhNghiem()">Tính</button>
+<p id="Result"></p>
+<p id="Result1"></p>
+<script>
+    function tinhNghiem() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let delta = (b ** 2) - (4 * a * c);
+        let result;
+        if (delta < 0) {
+            result = "Vô nghiệm";
+            result = "Vô nghiệm";
+            document.getElementById("Result").innerHTML = "X1 =" + result;
+            document.getElementById("Result1").innerHTML = "X2 =" + result;
+        } else if (delta > 0) {
+            result = ((-b + Math.sqrt(delta)) / (2 * a));
+            result = ((-b - Math.sqrt(delta)) / (2 * a));
+            document.getElementById("Result").innerHTML = "X1 =" + result;
+            document.getElementById("Result1").innerHTML = "X2 =" + result;
+        } else {
+            result = -b / a;
+            result = -b / a;
+            document.getElementById("Result").innerHTML = "X1 =" + result;
+            document.getElementById("Result1").innerHTML = "X2 =" + result;
+        }
+    }
+</script>
+</body>
+</html>

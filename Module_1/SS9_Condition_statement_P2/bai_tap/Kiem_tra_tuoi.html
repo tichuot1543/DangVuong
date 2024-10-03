@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi thật</title>
+</head>
+<body>
+<h3>Kiểm tra tuổi</h3>
+<input type="number" placeholder="Nhập số tuổi" id="age">
+<button onclick="check()">Kiểm tra</button>
+<p id="Result"></p>
+<script>
+    function check() {
+        let age = +document.getElementById("age").value;
+        if (Number.isInteger(age) && age > 0 && age < 120) {
+            document.getElementById("Result").innerHTML = "Đây là số phù hợp với số tuổi";
+        } else {
+            document.getElementById("Result").innerHTML = "ERROR"
+            alert("Số này không phù hợp với số tuổi. Vui lòng nhập lại.");
+        }
+    }
+</script>
+</body>
+</html>

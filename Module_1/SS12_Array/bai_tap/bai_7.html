@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [31, 27, 12, 15, 4, 69, 29, 7, 6, 9];
+    document.write("Mảng ban đầu là: " + array + "<br>")
+    let numbers = +prompt("Nhập vào số nguyên");
+    for (let i = 1; i < array.length; i++) {
+        if (numbers === array[i]) {
+            array.splice(i,1);
+            array.push(0);
+        }
+    }
+    alert("Có sự thay đổi của các phần tử số nguyên có trong mảng");
+    document.write("Mảng sau khi sửa: " + array)
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh giá học lực</title>
+</head>
+<body>
+<h3>Đánh giá học lực</h3>
+<input type="number" placeholder="Điểm chuyên cần" id="a">
+<input type="number" placeholder="Điểm giữa kỳ" id="b">
+<input type="number" placeholder="Điểm cuối kỳ" id="c">
+<button onclick="tinhDiem ()">Nhập</button>
+<p id="Result"></p>
+<p id="Result1"></p>
+<script>
+    function tinhDiem () {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let total = (a + (b * 2) + (c * 3)) / 6;
+        if (total >= 8 && total <= 10) {
+            document.getElementById("Result").innerHTML = "Tổng điểm: " + total;
+            document.getElementById("Result1").innerHTML = "Học lực: Giỏi";
+        } else if (total < 8 && total >= 6) {
+            document.getElementById("Result").innerHTML = "Tổng điểm: " + total;
+            document.getElementById("Result1").innerHTML = "Học lực: Khá";
+        } else if (total < 6 && total >= 0) {
+            document.getElementById("Result").innerHTML = "Tổng điểm: " + total;
+            document.getElementById("Result1").innerHTML = "Học lực: Trung bình yếu";
+            alert("Mời bạn đóng tiền học lại");
+        } else {
+            document.getElementById("Result").innerHTML = "Error";
+            document.getElementById("Result1").innerHTML = "Error";
+            alert("Vui lòng nhập lại điểm")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max value</title>
+</head>
+<body>
+<h3>So sánh giá trị</h3>
+<input type="number" placeholder="Nhập số a" id="number1">
+<input type="number" placeholder="Nhập số b" id="number2">
+<input type="number" placeholder="Nhập số c" id="number3">
+<button onclick="hienThi ()">Find max</button>
+<p id="Max"></p>
+<script>
+    function hienThi() {
+        let number1 = +document.getElementById("number1").value;
+        let number2 = +document.getElementById("number2").value;
+        let number3 = +document.getElementById("number3").value;
+        let max;
+        if (number1 > number2 && number1 > number3) {
+            max = number1;
+        } else if (number2 > number1 && number2 > number3) {
+            max = number2;
+        } else if (number3 > number1 && number3 > number2) {
+            max = number3;
+        }
+        document.getElementById("Max").innerHTML = "Max: " + max
+    }
+</script>
+</body>
+</html>

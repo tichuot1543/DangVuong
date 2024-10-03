@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày trong tháng</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập tháng trong năm" id="monthofyear">
+<button onclick="demNgay()">Tính số ngày</button>
+<p id="Result"></p>
+<script>
+    function demNgay() {
+        let month = +document.getElementById("monthofyear").value;
+        let result;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result = "Tháng này có 31 ngày"
+                document.getElementById("Result").innerHTML = "Result:" + result;
+                break;
+            case 2:
+                result = "Tháng này có 28 hoặc 29 ngày"
+                document.getElementById("Result").innerHTML = "Result:" + result;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result = "Tháng này có 30 ngày"
+                document.getElementById("Result").innerHTML = "Result:" + result;
+            default:
+                result = "Không có tháng này. Vui lòng nhập lại..."
+                document.getElementById("Result").innerHTML = "Result:" + result
+
+        }
+    }
+</script>
+</body>
+</html>

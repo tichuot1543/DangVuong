@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<input type="number" placeholder="Thu nhập mỗi tháng" id="a">
+<button onclick="tinhThue()">Tính Thuế</button>
+<p id="Result"></p>
+<script>
+    function tinhThue() {
+        let salary = +document.getElementById("a").value;
+        let thue = salary * (10/100);
+        document.getElementById("Result").innerHTML = "Tiền thuế cần nộp là (VND): " + thue;
+    }
+</script>
+</body>
+</html>

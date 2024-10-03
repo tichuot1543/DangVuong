@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const number = +prompt("Nhập vào một số")
+    let n = 0;
+    let n1 = 1;
+    let n2;
+    document.write("Dãy số Fibonacci:" + "<br>")
+    for (let i = 0; i < number; i++) {
+        n2 = n + n1;
+        n = n1;
+        n1 = n2;
+        document.write(n + "<br>")
+    }
+</script>
+</body>
+</html>

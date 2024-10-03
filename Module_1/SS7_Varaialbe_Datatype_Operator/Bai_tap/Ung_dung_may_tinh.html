@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<h3>CACULATOR</h3>
+<body>
+<input type="number" value="số 1" id="number1">
+<input type="number" value="số 2" id="number2">
+<br>
+<br>
+<button onclick="tinhToan ()">Addition (+)</button>
+<button onclick="tinhToan1 ()">Subtraction (-)</button>
+<button onclick="tinhToan2 ()">Multiplication (x)</button>
+<button onclick="tinhToan3 ()">Division (/)</button>
+<p id="Result"></p>
+<script>
+    function tinhToan() {
+        let value1 = +document.getElementById("number1").value;
+        let value2 = +document.getElementById("number2").value;
+        let tinhTong = value1 + value2;
+        document.getElementById("Result").innerHTML = "Result addition: " + tinhTong
+    }
+
+    function tinhToan1() {
+        let value1 = +document.getElementById("number1").value;
+        let value2 = +document.getElementById("number2").value;
+        let tinhHieu = value1 - value2;
+        document.getElementById("Result").innerHTML = "Result subtraction: " + tinhHieu
+    }
+
+    function tinhToan2() {
+        let value1 = +document.getElementById("number1").value;
+        let value2 = +document.getElementById("number2").value;
+        let tinhTich = value1 * value2;
+        document.getElementById("Result").innerHTML = "Result multiplication: " + tinhTich
+    }
+
+    function tinhToan3() {
+        let value1 = +document.getElementById("number1").value;
+        let value2 = +document.getElementById("number2").value;
+        let tinhThuong = value1 / value2;
+        document.getElementById("Result").innerHTML = "Result division: " + tinhThuong
+    }
+</script>
+</body>
+</html>

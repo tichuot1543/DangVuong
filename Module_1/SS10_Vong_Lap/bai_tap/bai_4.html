@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="Result"></p>
+<script>
+    let n = 1;
+    let n1 = 1;
+    let n2;
+    for ( let i = 1; i <= 20; i++) {
+        n2 = n + n1;
+        n = n1;
+        n1 = n2;
+        if (n % 5 === 0) {
+            document.getElementById("Result").innerHTML = "Đây là số chia hết cho 5:" + n;
+            break;
+        }
+    }
+
+
+</script>
+</body>
+</html>

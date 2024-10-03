@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNumber(num) {
+        if (Number.isInteger(num) > 0) {
+            alert("Đây là số nguyên dương");
+        } else if (Number.isInteger(num) < 0) {
+            alert("Đây là số nguyên âm");
+        } else {
+            alert("Lỗi! Bạn phải nhập số nguyên.")
+        }
+    }
+
+    checkNumber(+prompt("Nhập vào số nguyên muốn kiểm tra"))
+</script>
+</body>
+</html>

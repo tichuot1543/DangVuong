@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, width, area, perimeter) {
+            this.lengths = length;
+            this.width = width;
+
+        }
+
+        mathArea() {
+            let areas = this.lengths * this.width;
+            return 'Diện tích hình chữ nhật là: ' + areas;
+        }
+        mathPerimeter(){
+            let perimeters = (this.lengths + this.width) / 2;
+            return 'Chu vi hình chữ nhật là: ' + perimeters;
+        }
+
+        // calculates() {
+        //
+        // }
+    }
+
+    let rectangle = new Rectangle(+prompt('Nhập vào chiều dài:'), +prompt('Nhập vào chiều rộng: '));
+    document.write('Chiều dài của hình chữ nhật là: ' + rectangle.lengths + '<br>');
+    document.write('Chiều rộng của hình chữ nhật là: ' + rectangle.width + '<br>');
+    document.write(rectangle.mathArea() + '<br>');
+    document.write(rectangle.mathPerimeter() + '<br>');
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let numbers = +prompt(" Nhập vào số lượng phân tử: ");
+    let num;
+    for (let i = 0; i < numbers; i++) {
+        array[i] = +prompt(" Nhập phân tử thứ " + (i + 1));
+    }
+    document.write("Mảng được khởi tạo là:" + array);
+    document.write("<br>")
+    count = 0
+    for (let j = 0; j < numbers; j++) {
+        if (array[j] < 0) {
+            num = array[j];
+            count++
+            document.write(" Các phân tử số bé hơn 0 là: " + num);
+            document.write("<br>")
+        }
+    }
+    document.write(" Số phân tử bé hơn 0 là: " + count);
+
+
+</script>
+</body>
+</html>

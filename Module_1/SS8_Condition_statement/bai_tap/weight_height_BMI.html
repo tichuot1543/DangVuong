@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<h3>Tính chỉ số BMI</h3>
+<table>
+    <tr>
+        <th>Cân nặng</th>
+        <th>Chiều cao</th>
+    </tr>
+    <tr>
+        <td><input type="number" placeholder="kilogram" id="weight"></td>
+        <td><input type="number" placeholder="metre" id="height"></td>
+        <td>
+            <button onclick="chuyenDoi()"><b>Convert</b></button>
+        </td>
+    </tr>
+</table>
+<p id="Result"></p>
+<script>
+    function chuyenDoi() {
+        let weight = +document.getElementById("weight").value;
+        let height = +document.getElementById("height").value;
+        let bmi = weight / (height ** 2);
+        document.getElementById("Result").innerHTML = "Result:" + bmi;
+        if (bmi < 18.5) {
+            alert("Suy dinh dưỡng. Bạn có bị nghiện không???")
+        } else if (bmi < 25) {
+            alert("Nếu là nữ thì bạn có ngiu chưa. Nếu là nam thì tôi không quan tâm lắm :vv")
+        } else if (bmi < 30) {
+            alert("Bạn múp đấy <3")
+        } else {
+            alert("I thinhk bạn should tập thể dục và ăn uống điều độ")
+        }
+    }
+</script>
+</body>
+</html>

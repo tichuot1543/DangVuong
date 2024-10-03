@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích HCN</title>
+</head>
+<body>
+<h3>Tính diện tích hình chữ nhật</h3>
+<input type="number" placeholder="Cạnh a" id="a">
+<input type="number" placeholder="Cạnh b" id="b">
+<button onclick="tinhToan()">Tính</button>
+<p id="Result"></p>
+<script>
+    function tinhToan() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = a*b;
+        document.getElementById("Result").innerHTML = "Diện tích hình chữ nhật là:" + c;
+    }
+</script>
+</body>
+</html>

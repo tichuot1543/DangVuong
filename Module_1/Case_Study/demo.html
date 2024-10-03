@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng số</title>
+</head>
+<body>
+<p id="number"></p>
+
+<script>
+    var number = 1234567890;
+    var formattedNumber = number.toLocaleString('vi-VN'); // Định dạng số theo chuẩn Việt Nam
+    document.getElementById("number").innerHTML = formattedNumber;
+</script>
+</body>
+</html>

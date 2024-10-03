@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let arr = [];
+    let sum = 0
+    let numbers = parseInt(prompt("Nhập số lượng phân tử của mảng"));
+    for (let i = 0; i < numbers; i++) {
+        arr[i] = parseInt(prompt(" Nhập vào phần tử thứ " + (i + 1) + " của mảng "));
+    }
+    document.write(" Ta có mảng được khai báo là: " + arr + "<br>");
+    for (let j = 0; j < numbers; j++) {
+      if (arr[j] % 3 === 0 && arr[j] % 5 === 0){
+
+          sum+= arr[j]
+      }
+
+    }
+    document.write(" Tổng: " + sum);
+
+
+
+</script>
+</body>
+</html>

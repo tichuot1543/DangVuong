@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let numbers = +prompt("Nhập số lượng phân tử của mảng");
+    let num;
+    for (let i = 0; i < numbers; i++) {
+        arr[i] = +prompt(" Nhập vào phần tử thứ " + (i + 1) + " của mảng ");
+    }
+    document.write(" Ta có mảng được khai báo là: " + arr);
+    for (let j = 0; j < numbers / 2; j++) {
+        num = arr[j]
+        arr [j] = arr[(numbers - j - 1)];
+        arr[(numbers - j - 1)] = num;
+    }
+    document.write("<br>")
+    document.write(" Mảng sau khi đảo ngược là: " + arr);
+</script>
+</body>
+</html>

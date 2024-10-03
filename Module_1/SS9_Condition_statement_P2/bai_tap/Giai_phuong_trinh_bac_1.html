@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<input type="number" placeholder="Số a" id="a">
+<input type="number" placeholder="Số b" id="b">
+<button onclick="tinhNghiem()">Tính</button>
+<p id="Result"></p>
+<script>
+    function tinhNghiem() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = -b / a
+        document.getElementById("Result").innerHTML = "X=" + c;
+    }
+</script>
+</body>
+</html>

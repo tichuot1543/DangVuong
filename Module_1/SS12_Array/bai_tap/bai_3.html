@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [2, 33, 4, 5, 6, 4, 3, 55];
+    let tong = 0;
+    let tb;
+    let max = numbers[0];
+    let position = 0
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            position = i;
+        }
+    }
+    for (let j = 1; j < numbers.length; j++) {
+        tong += numbers[j];
+    }
+    tb = tong / numbers.length;
+    document.write(" Số lớn nhất là: " + max + " Vị trí " + position);
+    document.write("<br>")
+    document.write(" Số tb là: " + tb);
+</script>
+</body>
+</html>
